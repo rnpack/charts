@@ -4,14 +4,18 @@ Various charts with animation for React Native
 
 ## Installation
 
+
 ```sh
-npm install @rnpack/charts
+npm install @rnpack/charts react-native-nitro-modules
+
+> `react-native-nitro-modules` is required as this library relies on [Nitro Modules](https://nitro.margelo.com/).
 ```
+
 
 ## Dependencies
 
 ```sh
-npm i react-native-svg
+npm i react-native-svg react-native-reanimated react-native-worklets
 ```
 
 ## Usage

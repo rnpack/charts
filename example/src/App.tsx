@@ -1,11 +1,6 @@
-import {
-  Platform,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import { DonutChart } from '@rnpack/charts';
 
 export default function App() {
@@ -26,31 +21,11 @@ export default function App() {
           radius={120}
           strokeColor={'rgba(227, 27, 35, 1)'}
           percentage={82}
-          textContainerStyle={{
-            borderRadius: 100,
-            paddingHorizontal: Platform?.OS === 'ios' ? 7 : 12,
-            paddingVertical: 7,
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#FFFFFA',
-
-            shadowColor: '#000',
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.25,
-            shadowRadius: 3.84,
-
-            elevation: 5,
-          }}
+          textContainerStyle={styles.semiCircleTextContainerStyle}
         >
-          <View style={{ alignItems: 'center', rowGap: 5, paddingTop: 10 }}>
-            <Text style={{ fontSize: 21, fontWeight: '900' }}>Heart Rate</Text>
-            <Text
-              numberOfLines={1}
-              style={{ fontSize: 18, color: 'rgba(0, 0, 0, 0.6)' }}
-            >
+          <View style={styles.semiCircleContainer}>
+            <Text style={styles.semiCircleTitle}>Heart Rate</Text>
+            <Text numberOfLines={1} style={styles.semiCircleDescription}>
               Avg 60 to 100 beats/minute
             </Text>
           </View>
@@ -75,5 +50,22 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     marginVertical: 20,
+  },
+  semiCircleTextContainerStyle: {
+    borderRadius: 100,
+    paddingHorizontal: Platform?.OS === 'ios' ? 7 : 12,
+    paddingVertical: 7,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  semiCircleContainer: {
+    alignItems: 'center',
+    rowGap: 5,
+    paddingTop: 10,
+  },
+  semiCircleTitle: { fontSize: 21, fontWeight: '900' },
+  semiCircleDescription: {
+    fontSize: 18,
+    color: 'rgba(0, 0, 0, 0.6)',
   },
 });

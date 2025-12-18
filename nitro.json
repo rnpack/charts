@@ -1,0 +1,25 @@
+{
+  "cxxNamespace": [
+    "RNPackCharts"
+  ],
+  "ios": {
+    "iosModuleName": "RNPackCharts"
+  },
+  "android": {
+    "androidNamespace": [
+      "rnpack",
+      "charts"
+    ],
+    "androidCxxLibName": "RNPackCharts"
+  },
+  "autolinking": {
+    "RNPackCharts": {
+      "swift": "HybridRNPackCharts",
+      "kotlin": "HybridRNPackCharts"
+    }
+  },
+  "ignorePaths": [
+    "node_modules",
+    "example/node_modules"
+  ]
+}

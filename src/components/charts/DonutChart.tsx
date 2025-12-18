@@ -6,6 +6,10 @@ import {
   Animated as RNAnimated,
   Platform as RNPlatform,
 } from 'react-native';
+import ReAnimated, {
+  setNativeProps,
+  useAnimatedRef,
+} from 'react-native-reanimated';
 import Svg, { G, Circle } from 'react-native-svg';
 
 import type { PropsWithChildren } from 'react';
@@ -19,8 +23,8 @@ import type { Linecap, NumberProp } from 'react-native-svg';
 
 import type { BaseProps, DonutChartVariant } from '../../types';
 
-const AnimatedCircle = RNAnimated.createAnimatedComponent(Circle);
-const AnimatedTextInput = RNAnimated.createAnimatedComponent(RNTextInput);
+const AnimatedCircle = ReAnimated.createAnimatedComponent(Circle);
+const AnimatedTextInput = ReAnimated.createAnimatedComponent(RNTextInput);
 
 interface DonutChartProps extends BaseProps {
   variant?: DonutChartVariant;
@@ -105,7 +109,7 @@ function DonutChart(props: PropsWithChildren<DonutChartProps>) {
   ).current;
 
   const circleRef = useRef<Circle>(null);
-  const textInputRef = useRef<RNTextInput>(null);
+  const textInputRef = useAnimatedRef();
 
   const circleCircumference = 2 * Math.PI * maxRadius;
   const viewBoxSize = maxRadius + maxStrokeWidth;
@@ -128,7 +132,7 @@ function DonutChart(props: PropsWithChildren<DonutChartProps>) {
       }
 
       if (textInputRef?.current) {
-        textInputRef?.current?.setNativeProps({
+        setNativeProps(textInputRef, {
           text: `${props?.textPrefix ?? ''}${Math.round(callback.value)}${
             props?.textPostfix ?? ''
           }`,
