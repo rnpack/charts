@@ -44,7 +44,7 @@ MIT
       <img src="https://avatars.githubusercontent.com/u/41302126?v=4" width="64" height="64" alt="Abiraman K">
     </td>
     <td>
-      <a href="https://github.com/AbiramanK" target="_blank">Abiraman K</a>
+      <a href="https://abiramank.github.io" target="_blank">Abiraman K</a>
     </td>
   </tr>
 </table>

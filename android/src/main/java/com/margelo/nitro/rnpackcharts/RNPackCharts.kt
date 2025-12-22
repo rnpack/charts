@@ -1,4 +1,4 @@
-package com.margelo.nitro.rnpack.charts
+package com.margelo.nitro.rnpackcharts
 
 import android.view.View
 import com.facebook.proguard.annotations.DoNotStrip

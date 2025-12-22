@@ -1,6 +1,6 @@
 #include <jni.h>
-#include "RNPackChartsOnLoad.hpp"
+#include "rnpackchartsOnLoad.hpp"
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void*) {
-  return margelo::nitro::RNPackCharts::initialize(vm);
+  return margelo::nitro::rnpackcharts::initialize(vm);
 }

@@ -1,16 +1,15 @@
 {
   "cxxNamespace": [
-    "RNPackCharts"
+    "rnpackcharts"
   ],
   "ios": {
     "iosModuleName": "RNPackCharts"
   },
   "android": {
     "androidNamespace": [
-      "rnpack",
-      "charts"
+      "rnpackcharts"
     ],
-    "androidCxxLibName": "RNPackCharts"
+    "androidCxxLibName": "rnpackcharts"
   },
   "autolinking": {
     "RNPackCharts": {

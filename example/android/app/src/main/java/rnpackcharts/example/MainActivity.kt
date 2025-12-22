@@ -1,4 +1,4 @@
-package rnpack.charts.example
+package rnpackcharts.example
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

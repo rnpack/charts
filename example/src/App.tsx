@@ -1,12 +1,18 @@
 import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { DonutChart } from '@rnpack/charts';
+import {
+  // RNPackChartsView,
+  DonutChart,
+} from '@rnpack/charts';
 
 export default function App() {
   return (
     <SafeAreaView style={styles?.container}>
       <ScrollView contentContainerStyle={styles?.content}>
+        <View style={styles.nativeContainer}>
+          {/* <RNPackChartsView color="#32a852" style={styles.box} /> */}
+        </View>
         <DonutChart radius={60} strokeColor={'#FF000A'} percentage={60} />
         <DonutChart
           variant="semi-circle"
@@ -38,6 +44,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  nativeContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   content: {
     flexGrow: 1,

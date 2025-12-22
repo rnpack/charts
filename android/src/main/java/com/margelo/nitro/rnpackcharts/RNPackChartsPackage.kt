@@ -1,4 +1,4 @@
-package com.margelo.nitro.rnpack.charts
+package com.margelo.nitro.rnpackcharts
 
 import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.ViewManager
 
-import com.margelo.nitro.rnpack.charts.views.HybridRNPackChartsManager
+import com.margelo.nitro.rnpackcharts.views.HybridRNPackChartsManager
 
 class RNPackChartsPackage : BaseReactPackage() {
     override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
@@ -23,7 +23,7 @@ class RNPackChartsPackage : BaseReactPackage() {
 
     companion object {
         init {
-            System.loadLibrary("RNPackCharts")
+            System.loadLibrary("rnpackcharts")
         }
     }
 }

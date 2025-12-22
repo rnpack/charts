@@ -271,7 +271,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "rnpack.charts.example";
+				PRODUCT_BUNDLE_IDENTIFIER = "rnpackcharts.example";
 				PRODUCT_NAME = RNPackChartsExample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -298,7 +298,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "rnpack.charts.example";
+				PRODUCT_BUNDLE_IDENTIFIER = "rnpackcharts.example";
 				PRODUCT_NAME = RNPackChartsExample;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
